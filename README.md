@@ -16,8 +16,10 @@ $$f(x) = \frac{ ( 1-m(x) )^k r(\lfloor x \rfloor - 1) + r(\lfloor x \rfloor) + m
 
 The algorithm takes the weighted average of values of $r(x)$ for integers near $x$. $k$ affects how the weight is applied. It can be any number where $k > 1$. The higher $k$ is, the closer the spline fits the random values.
 
-# Using Python Code
+# Using Python or C++ Code
 The function ```pokki_noise()``` has three inputs:
-<br>```inputNum```: a float, the input value of the function. It is something like 1.37.
-<br>```seed```: a list of floats, the seed of the function. It is something like [0.432, 0.135, 0.228].
-<br>```k```: a float, affects the sharpness of the noise. it is something like 3. It works best between 2 and 5.
+<br>```inputNum```: (a float in python, a double in C++), the input value of the function. It is something like 1.37.
+<br>```seed```: (a list of floats in python, a vector<double> in C++), the seed of the function. It is something like [0.432, 0.135, 0.228].
+<br>```k```: (a float in python, a double is C++), affects the sharpness of the noise. it is something like 3. It works best between 2 and 5.
+
+Note: In C++, the function returns a double.
